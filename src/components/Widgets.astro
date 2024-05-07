@@ -12,7 +12,7 @@
             <img
                 alt="form-redirect-button"
                 class="h-7 mt-3 mr-2"
-                src="/icons/rocket_black.svg"
+                src="/icons/react.svg"
             />
         </div>
     </div>
@@ -23,7 +23,7 @@
             <img
                 alt="form-redirect-button"
                 class="h-7 mt-3 mr-2"
-                src="/icons/rocket_black.svg"
+                src="/icons/apple.svg"
             />
         </div>
     </div>
@@ -55,8 +55,8 @@
         <div class="justify-start">
             <img
                 alt="form-redirect-button"
-                class="size-7 mt-3 mr-2 mb-10"
-                src="/icons/rocket_black.svg"
+                class="mt-3 mr-2 mb-10"
+                src="/images/swift.png"
             />
         </div>
         <span class="text-black font-bold rounded-full"
@@ -68,21 +68,77 @@
         style="grid-row: span 2; background-image: url('/images/excalidraw.png'); background-size: cover; background-position: center;"
     >
     </div>
+
     <div
-        class="p-5 shadow-xl border rounded-xl flex flex-wrap justify-start"
+        class="p-2 pt-3.5 shadow-xl border rounded-xl flex flex-col justify-start"
         style="grid-column: span 2;"
     >
-        <span class="badge m-1 animate-marquee">Innovación </span>
-        <span class="badge m-1 animate-marquee">Transparencia</span>
-        <span class="badge m-1 animate-marquee">Perseverancia</span>
-        <span class="badge m-1 animate-marquee">Creatividad</span>
-        <span class="badge m-1 animate-marquee">Experiencia</span>
-        <span class="badge m-1 animate-marquee">Determinación</span>
-        <span class="badge m-1 animate-marquee">Comunicación</span>
-        <span class="badge m-1 animate-marquee">Excelencia</span>
-        <span class="badge m-1 animate-marquee">Pasión</span>
-        <span class="badge m-1 animate-marquee">Agilidad</span>
-        <span class="badge m-1 animate-marquee">Compromiso</span>
-        <span class="badge m-1 animate-marquee">Valentía</span>
+        <div class="overflow-hidden" style="width: 100%;">
+            <div class="animate-marquee">
+                <div class="flex">
+                    <span class="badge m-1">Innovación</span>
+                    <span class="badge m-1">Transparencia</span>
+                    <span class="badge m-1">Perseverancia</span>
+                    <span class="badge m-1">Creatividad</span>
+                    <span class="badge m-1">Experiencia</span>
+                    <span class="badge m-1">Determinación</span>
+                </div>
+                <div class="flex">
+                    <span class="badge m-1">Innovación</span>
+                    <span class="badge m-1">Transparencia</span>
+                    <span class="badge m-1">Perseverancia</span>
+                    <span class="badge m-1">Creatividad</span>
+                    <span class="badge m-1">Experiencia</span>
+                    <span class="badge m-1">Determinación</span>
+                </div>
+            </div>
+            <div class="animate-marquee">
+                <div class="flex">
+                    <span class="badge m-1">Comunicación</span>
+                    <span class="badge m-1">Excelencia</span>
+                    <span class="badge m-1">Pasión</span>
+                    <span class="badge m-1">Agilidad</span>
+                    <span class="badge m-1">Compromiso</span>
+                    <span class="badge m-1">Valentía</span>
+                </div>
+                <div class="flex">
+                    <span class="badge m-1">Comunicación</span>
+                    <span class="badge m-1">Excelencia</span>
+                    <span class="badge m-1">Pasión</span>
+                    <span class="badge m-1">Agilidad</span>
+                    <span class="badge m-1">Compromiso</span>
+                    <span class="badge m-1">Valentía</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<style>
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animate-marquee {
+        display: flex;
+        min-width: 200%;
+        animation: marquee 20s linear infinite;
+    }
+
+    .overflow-hidden {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .badge {
+        padding: 0.5rem 1rem;
+        border-radius: 10%;
+        background-color: #eee9f2;
+        font-size: 0.95rem;
+    }
+</style>
