@@ -5,7 +5,7 @@
     >
     </div>
 
-    <div class="p-5 shadow-xl border rounded-xl mb-4 text-center">
+    <div class="p-5 shadow-xl border rounded-xl text-center">
         <span class="text-black font-bold rounded-full">Desarrollo Web</span>
 
         <div class="justify-center items-center flex">
@@ -16,7 +16,7 @@
             />
         </div>
     </div>
-    <div class="p-5 shadow-xl border rounded-xl mb-4 text-center">
+    <div class="p-5 shadow-xl border rounded-xl text-center">
         <span class="text-black font-bold rounded-full">Desarrollo Móvil</span>
 
         <div class="justify-center items-center flex">
@@ -92,7 +92,7 @@
                     <span class="badge m-1">Determinación</span>
                 </div>
             </div>
-            <div class="animate-marquee">
+            <div class="animate-marquee-2">
                 <div class="flex">
                     <span class="badge m-1">Comunicación</span>
                     <span class="badge m-1">Excelencia</span>
@@ -124,10 +124,25 @@
         }
     }
 
+    @keyframes marquee2 {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
     .animate-marquee {
         display: flex;
         min-width: 200%;
         animation: marquee 20s linear infinite;
+    }
+
+    .animate-marquee-2 {
+        display: flex;
+        min-width: 200%;
+        animation: marquee2 20s linear infinite;
     }
 
     .overflow-hidden {
