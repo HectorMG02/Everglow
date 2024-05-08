@@ -1,28 +1,49 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const AnimatedWord = ({ words }: { words: string[]}) => {
-    const [word, setWord] = useState(words[0]);
+const AnimatedWord = ({ words }: { words: string[] }) => {
+    const [index, setIndex] = useState(0);
+    const [isExiting, setIsExiting] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setWord(prevWord => {
-                const newIndex = (words.indexOf(prevWord) + 1) % words.length;
-                return words[newIndex]; 
-            });
-        }, 1500);
+            setIsExiting(true);
+            setTimeout(() => {
+                setIndex((prevIndex) => (prevIndex + 1) % words.length);
+                setIsExiting(false);
+            }, 500);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [words]);
 
+    const wordVariants = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+        exit: { opacity: 0, y: -20, transition: { duration: 0.25 } }
+    };
+
+
+    const maxWidth = Math.max(...words.map(word => word.length));
+
     return (
-        <span
-            id="word"
-            className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500
-                       transition-all duration-1500 ease-in-out
-                       animate-pulse"
-        >
-            {word}
-        </span>
+        <div style={{ width: `${maxWidth * 0.9}ch`, display: 'inline-block' }}>
+            <AnimatePresence>
+                {!isExiting && (
+                    <motion.span
+                        key={index}
+                        variants={wordVariants}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500"
+                        style={{ display: 'inline-block', width: '100%' }}
+                    >
+                        {words[index]}
+                    </motion.span>
+                )}
+            </AnimatePresence>
+        </div>
     );
 };
 
