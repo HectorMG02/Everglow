@@ -3,7 +3,9 @@ import AnimatedBadge from './AnimatedBadge';
 ---
 
 <div>
-    <div class="grid grid-cols-4 grid-rows-4 gap-4 p-4">
+    <div
+        class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 grid-rows-1 md:grid-rows-2 lg:grid-rows-4 gap-4 p-4"
+    >
         <div
             class="p-5 shadow-xl border rounded-xl bg-white/70"
             style="grid-row: span 2; background-image: url('/images/web.svg'); background-size: cover; background-position: center;"
@@ -12,26 +14,23 @@ import AnimatedBadge from './AnimatedBadge';
 
         <div class="p-5 shadow-xl border rounded-xl bg-white/70 text-center">
             <div class="justify-center items-center flex mt-2">
-                <img src="/images/website.png" class="size-12 mb-4" />
+                <img src="/images/website.png" class="h-12 mb-4" />
             </div>
-            <span class="rounded-full
-                text-lg"
+            <span class="rounded-full text-lg"
                 ><strong class="widget-title">Desarrollo Web</strong></span
             >
         </div>
 
         <div class="p-5 shadow-xl border rounded-xl bg-white/70 text-center">
             <div class="justify-center items-center flex mt-2">
-                <img src="/images/devices.png" class="size-12 mb-4" />
+                <img src="/images/devices.png" class="h-12 mb-4" />
             </div>
-            <span class="rounded-full
-                text-lg"
+            <span class="rounded-full text-lg"
                 ><strong class="widget-title-2">Desarrollo Móvil</strong></span
             >
         </div>
-
         <div
-            class="p-5 shadow-xl border rounded-xl bg-white/70"
+            class="p-5 shadow-xl border rounded-xl bg-white/70 responsive-picture"
             style="grid-row: span 2; background-image: url('/images/app.svg'); background-size: cover; background-position: center;"
         >
         </div>
@@ -45,8 +44,7 @@ import AnimatedBadge from './AnimatedBadge';
             </div>
             <div class="px-5">
                 <span
-                    class="text-black font-bold
-            rounded-full text-lg text-left widget-subtitle"
+                    class="text-black font-bold rounded-full text-lg text-left widget-subtitle"
                     >Te ayudaremos para que crees contenido auténtico y
                     atractivo en redes sociales, mientras te mantenemos al tanto
                     de cada avance en el proceso de desarrollo con completa
@@ -65,19 +63,20 @@ import AnimatedBadge from './AnimatedBadge';
             <div class="justify-start">
                 <img
                     alt="form-redirect-button"
-                    class="mt-3 ml-5 mb-10 size-4/5"
+                    class="mt-3 ml-5 mb-10"
                     src="/images/tips.svg"
                 />
             </div>
         </div>
+
         <div
             class="p-5 shadow-xl border rounded-xl bg-white/70"
-            style="grid-row: span 2; background-image: url('/images/help.svg'); background-size: cover; background-position: center;"
+            style="grid-row: span 2; min-height: 350px; background-image: url('/images/help.svg'); background-size: 100% 100%; background-position: center;"
         >
         </div>
 
         <div
-            class="p-2 pt-4 shadow-xl border rounded-xl bg-white/70 flex flex-col justify-start"
+            class="p-2 pt-2 lg:pt-6 xl:pt-8 shadow-xl border rounded-xl bg-white/70 flex flex-col justify-start"
             style="grid-column: span 2;"
         >
             <div class="overflow-hidden" style="width: 100%;">
@@ -94,7 +93,7 @@ import AnimatedBadge from './AnimatedBadge';
                         <AnimatedBadge client:load>Innovación</AnimatedBadge>
                         <AnimatedBadge client:load>Transparencia</AnimatedBadge>
                         <AnimatedBadge client:load>Perseverancia</AnimatedBadge>
-                        <AnimatedBadge client:load>Creatividad</AnimatedBadge>
+
                         <AnimatedBadge client:load>Experiencia</AnimatedBadge>
                         <AnimatedBadge client:load>Determinación</AnimatedBadge>
                     </div>
@@ -137,7 +136,7 @@ import AnimatedBadge from './AnimatedBadge';
         </div>
     </div>
 
-    <div class="text-center mb-10">🚀 Powered By Everglow</div>
+    <div class="text-center mb-10 mt-10 lg:mt-2">🚀 Powered By Everglow</div>
 </div>
 
 <style>
@@ -208,5 +207,12 @@ import AnimatedBadge from './AnimatedBadge';
         font-size: 1.5rem;
         background-color: white;
         font-weight: bold;
+    }
+
+    @media (max-width: 720px) {
+        .responsive-picture {
+            min-height: 200px;
+            min-width: 460px;
+        }
     }
 </style>
