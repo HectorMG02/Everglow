@@ -45,9 +45,9 @@ const handleAnimation = () => {
     onClick={() => setIsActive(!isActive)}
     className="cursor-pointer m-2"
     style={{ "padding": "0.5rem 1rem", 
-"borderRadius": "10%",
-"backgroundColor": "#eee9f2",
-"fontSize": "0.95rem"}}
+        "borderRadius": "10%",
+        "backgroundColor": "#eee9f2",
+        "fontSize": "0.95rem"}}
   >
     {children}
   </motion.div>
