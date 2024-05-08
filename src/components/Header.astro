@@ -13,6 +13,14 @@
             />
         </a>
 
+        <button
+            id="darkModeToggleButton"
+            class="cursor-pointer
+            border border-gray-300 dark:border-gray-700"
+        >
+            Toggle
+        </button>
+
         <a
             href="https://www.linkedin.com/company/everglow-sl"
             target="_blank"
@@ -23,3 +31,12 @@
         </a>
     </div>
 </header>
+
+<script>
+    const darkModeToggleButton = document.querySelector(
+        '#darkModeToggleButton'
+    );
+    darkModeToggleButton?.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+    });
+</script>
