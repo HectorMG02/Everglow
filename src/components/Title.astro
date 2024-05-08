@@ -16,6 +16,7 @@ import AnimatedWord from './AnimatedWord';
 text-base font-medium rounded-md outline-none focus:ring-2 focus:ring-offset-2
 focus:ring-black transition-all duration-300 ease-in-out hover:bg-gray-100
 hover:animate-pulse hover:shadow-lg cursor-pointer"
+        id="redirectButton"
     >
         <img
             alt="form-redirect-button"
@@ -39,6 +40,14 @@ hover:animate-pulse hover:shadow-lg cursor-pointer"
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('redirectButton')?.addEventListener('click', () => {
+        document.getElementById('footer')?.scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+</script>
 
 <style>
     .spawn-animated {
