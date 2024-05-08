@@ -1,4 +1,4 @@
-<div class="text-center mb-10">
+<div class="text-center my-24">
     <h2 class="mb-10">Conoce un poco más sobre lo que hacemos</h2>
 
     <span
@@ -19,11 +19,12 @@
         >
     </span>
 
-    <div class="grid grid-cols-2 gap-4 mt-14">
+    <div class="grid grid-cols-2 gap-4 mt-24">
         <img
             src="/images/threejs.png"
             alt="Frontend"
-            class="rounded-xl mr-10 w-6/7 shadow-2xl"
+            class="rounded-xl mr-10 shadow-2xl animated-card-left"
+            width="450px"
         />
 
         <div class="ml-10 text-left w-full">
@@ -42,7 +43,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 my-32">
+    <div class="grid grid-cols-2 gap-4 my-24">
         <div class="mr-10 text-left w-full">
             <img
                 src="/icons/apple.svg"
@@ -63,15 +64,17 @@
         <img
             src="/images/flutter.png"
             alt="Desarrollo Móvil"
-            class="rounded-xl mr-10 mt-12 w-6/7 shadow-2xl"
+            class="rounded-xl ml-10 mt-12 shadow-2xl animated-card-right"
+            width="450px"
         />
     </div>
 
-    <div class="grid grid-cols-2 gap-4 mt-14">
+    <div class="grid grid-cols-2 gap-4">
         <img
             src="/images/excalidraw.png"
             alt="Asesoramiento técnico"
-            class="rounded-xl mr-10 mt-12 w-6/7 shadow-2xl"
+            class="rounded-xl mr-10 mt-12 shadow-2xl animated-card-left"
+            width="450px"
         />
 
         <div class="ml-10 text-left w-full">
@@ -91,3 +94,17 @@
         </div>
     </div>
 </div>
+
+<style>
+    @media (pointer: fine) {
+        .animated-card-left:hover {
+            transform: scale(1.05) rotate(-5deg);
+            transition: transform 0.5s;
+        }
+
+        .animated-card-right:hover {
+            transform: scale(1.05) rotate(5deg);
+            transition: transform 0.5s;
+        }
+    }
+</style>
