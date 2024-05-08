@@ -1,12 +1,13 @@
+---
+import AnimatedWord from './AnimatedWord';
+---
+
 <div class="my-10 pb-5 w-full">
     <h1 class="text-center bg-clip-text h-48">
-        Desarrolla tu <span
-            id="word"
-            class="bg-clip-text
-            transition-all duration-1000 ease-in-out
-        animate-pulse"
-            >Misión</span
-        > con Everglow
+        Desarrolla tu <AnimatedWord
+            client:load
+            words={['misión', 'visión', 'idea']}
+        /> con Everglow
     </h1>
 
     <button
@@ -38,3 +39,8 @@ hover:animate-pulse hover:shadow-lg cursor-pointer"
         </div>
     </div>
 </div>
+<style>
+    .spawn-animated {
+        @apply from-blue-500 to-green-500 bg-gradient-to-r;
+    }
+</style>
