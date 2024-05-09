@@ -17,6 +17,7 @@ export default {
           TITLE: '#ffff',
           TITLE2: '#ffff',
           TITLE3: '#ffff',
+          WIDGET: '#ffff',
         },
       },
     },
