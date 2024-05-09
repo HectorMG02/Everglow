@@ -1,3 +1,7 @@
+---
+import ColorModeButton from './ColorModeButton';
+---
+
 <header>
     <div class="flex justify-between items-center p-4 pl-2 lg:pl-20">
         <a
@@ -13,30 +17,25 @@
             />
         </a>
 
-        <button
-            id="darkModeToggleButton"
-            class="cursor-pointer
-            border border-gray-300 dark:border-gray-700"
-        >
-            Toggle
-        </button>
+        <div class="flex">
+            <div class="mr-4">
+                <a
+                    href="https://www.linkedin.com/company/everglow-sl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cursor-pointer hover:opacity-50 transition-opacity duration-300 ease-in-out mr-[-20%] lg:mr-5"
+                >
+                    <img
+                        src="/icons/linkedin.png"
+                        alt="linkedin"
+                        class="size-7"
+                    />
+                </a>
+            </div>
 
-        <a
-            href="https://www.linkedin.com/company/everglow-sl"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cursor-pointer hover:opacity-50 transition-opacity duration-300 ease-in-out mr-[-20%] lg:mr-5"
-        >
-            <img src="/icons/linkedin.svg" alt="linkedin" class="h-7" />
-        </a>
+            <div>
+                <ColorModeButton client:only />
+            </div>
+        </div>
     </div>
 </header>
-
-<script>
-    const darkModeToggleButton = document.querySelector(
-        '#darkModeToggleButton'
-    );
-    darkModeToggleButton?.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-    });
-</script>
