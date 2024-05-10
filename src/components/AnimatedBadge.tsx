@@ -48,7 +48,7 @@ const AnimatedBadge = ({ children }: any) => {
       className="cursor-pointer m-2"
       style={{
         padding: "0.5rem 1rem",
-        borderRadius: "10%",
+        borderRadius: "8%",
         backgroundColor: "#eee9f2",
         fontSize: "0.95rem",
       }}
