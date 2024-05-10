@@ -53,6 +53,7 @@ import Header from '../components/Header.astro';
         background-size: 224px;
         color-scheme: light dark;
         color: rgb(100, 105, 142);
+        margin: 0;
     }
     h1,
     h2,
@@ -111,6 +112,10 @@ import Header from '../components/Header.astro';
     }
 
     @media (max-width: 768px) {
+        html {
+            margin-right: 210px !important;
+        }
+
         .description {
             font-size: 22px;
         }
