@@ -1,53 +1,50 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 const ColorModeButton = () => {
-    const [darkModeEnabled, setDarkModeEnabled] = useState("0")
-  
-    const changeColorMode = () => {
-        document.documentElement.classList.toggle('dark');
-        const value = localStorage.getItem('darkModeEnabled') === '1' ? '0' : '1';
-        
-        localStorage.setItem(
-            'darkModeEnabled',
-            value
-        );
+  const [darkModeEnabled, setDarkModeEnabled] = useState("0");
 
+  const changeColorMode = () => {
+    document.documentElement.classList.toggle("dark");
+    const value = localStorage.getItem("darkModeEnabled") === "1" ? "0" : "1";
 
-        setDarkModeEnabled(value)
-    }
-    
-    const checkButtonIcon = () => {
-        if (localStorage.getItem('darkModeEnabled') === '1') {
-            return "sun.png"
-        }
+    localStorage.setItem("darkModeEnabled", value);
 
-        return "moon.png"
+    setDarkModeEnabled(value);
+  };
+
+  const checkButtonIcon = () => {
+    if (localStorage.getItem("darkModeEnabled") === "1") {
+      return "sun.png";
     }
 
-    useEffect(() => {
-        const darkModeValue = localStorage.getItem('darkModeEnabled');
-        if (darkModeValue) {
-            setDarkModeEnabled(darkModeValue)
-        } else {
-            localStorage.setItem('darkModeEnabled', '0')
-        }
-    }, [])
+    return "moon.png";
+  };
+
+  useEffect(() => {
+    const darkModeValue = localStorage.getItem("darkModeEnabled");
+    if (darkModeValue) {
+      setDarkModeEnabled(darkModeValue);
+    } else {
+      localStorage.setItem("darkModeEnabled", "0");
+    }
+  }, []);
 
   return (
-    <button 
-        onClick={changeColorMode}
-        className="btn btn-primary
+    <button
+      onClick={changeColorMode}
+      className="btn btn-primary
 
                 bg-transparent
             rounded-lg p-1
         "
     >
-        <img 
-            src={`/images/${checkButtonIcon()}`}
-            className='size-6'
-        alt="color mode"/>
+      <img
+        src={`/images/${checkButtonIcon()}`}
+        className="size-6"
+        alt="color mode"
+      />
     </button>
-  )
-}
+  );
+};
 
-export default ColorModeButton
+export default ColorModeButton;
